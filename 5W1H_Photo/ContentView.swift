@@ -197,19 +197,19 @@ struct ContentView: View {
                                 self.ScreenAlert = "状態を選択して下さい。"
                             } else if Where == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Where：どこで」を入力して下さい。　対象外：「 ー 」"
+                                self.ScreenAlert = "「Where：どこで」を入力して下さい。　対象外：「(空白)」"
                             }else if Who == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Who：だれが」を入力して下さい。　対象外：「 ー 」"
+                                self.ScreenAlert = "「Who：だれが」を入力して下さい。　対象外：「(空白)」"
                             }else if What == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「What：何が」を入力して下さい。　対象外：「 ー 」"
+                                self.ScreenAlert = "「What：何が」を入力して下さい。　対象外：「(空白)」"
                             }else if Why == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Why：なぜ」を入力して下さい。　対象外：「 ー 」"
+                                self.ScreenAlert = "「Why：なぜ」を入力して下さい。　対象外：「(空白)」"
                             }else if How == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「How：どのように」を入力して下さい。　対象外：「 ー 」"
+                                self.ScreenAlert = "「How：どのように」を入力して下さい。　対象外：「(空白)」"
                             }
                             else if image == nil {
                                 self.ScreenShot = true
