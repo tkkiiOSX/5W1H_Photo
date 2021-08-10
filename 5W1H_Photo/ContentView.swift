@@ -97,6 +97,8 @@ struct txtField: View {
     
 }
 
+var imgCap: UIImage?
+
 struct ContentView: View {
     @State var image: Image?
     @State var jyoutai = 0
@@ -110,6 +112,7 @@ struct ContentView: View {
     @State var ScreenShot = false
     @State private var canvasRect: CGRect = .zero
     @State var ScreenAlert = ""
+    @State var flgActivity = false
 
     var f: DateFormatter {
         let f = DateFormatter()
@@ -214,10 +217,11 @@ struct ContentView: View {
                             } else {
                                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                                     let captureImage = capture(rect: geometry.frame(in: .global))
-                                    let croppedImage = cropImage(with: captureImage, rect: canvasRect)
-                                    UIImageWriteToSavedPhotosAlbum(croppedImage!, nil, nil, nil)
-                                    self.ScreenShot = true
-                                    self.ScreenAlert = "写真へ保存しました。"
+                                    imgCap = cropImage(with: captureImage, rect: canvasRect)
+                                    //UIImageWriteToSavedPhotosAlbum(croppedImage!, nil, nil, nil)
+                                    flgActivity = true
+                                    //self.ScreenShot = true
+                                    //self.ScreenAlert = "写真へ保存しました。"
 
                                 })
                             }
@@ -239,6 +243,7 @@ struct ContentView: View {
                     }
                 }
 
+
                 if isPhoto {
     //               ImagePicker()
     //                Rectangle()
@@ -251,6 +256,9 @@ struct ContentView: View {
 
             .font(.title)
         }
+        .sheet(isPresented: $flgActivity, content: {
+            ActivityView(activityItems: [imgCap!], applicationActivities: nil)
+        })
     }
 }
 

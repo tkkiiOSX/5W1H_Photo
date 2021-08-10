@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0A63A826C26CFD00A3DEA0 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A63A726C26CFD00A3DEA0 /* ActivityView.swift */; };
 		EBE6ADE726C0FEEF00715368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6ADE626C0FEEF00715368 /* AppDelegate.swift */; };
 		EBE6ADE926C0FEEF00715368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6ADE826C0FEEF00715368 /* SceneDelegate.swift */; };
 		EBE6ADEB26C0FEEF00715368 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6ADEA26C0FEEF00715368 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB0A63A726C26CFD00A3DEA0 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		EBE6ADE326C0FEEF00715368 /* 5W1H_Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5W1H_Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE6ADE626C0FEEF00715368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE6ADE826C0FEEF00715368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				EBE6ADEA26C0FEEF00715368 /* ContentView.swift */,
 				EBE6ADFC26C1003500715368 /* Coordinator.swift */,
 				EBE6ADFE26C1006A00715368 /* ImagePicker.swift */,
+				EB0A63A726C26CFD00A3DEA0 /* ActivityView.swift */,
 				EBE6ADEC26C0FEF000715368 /* Assets.xcassets */,
 				EBE6ADF126C0FEF000715368 /* LaunchScreen.storyboard */,
 				EBE6ADF426C0FEF000715368 /* Info.plist */,
@@ -156,6 +159,7 @@
 				EBE6ADFF26C1006A00715368 /* ImagePicker.swift in Sources */,
 				EBE6ADE926C0FEEF00715368 /* SceneDelegate.swift in Sources */,
 				EBE6ADEB26C0FEEF00715368 /* ContentView.swift in Sources */,
+				EB0A63A826C26CFD00A3DEA0 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
