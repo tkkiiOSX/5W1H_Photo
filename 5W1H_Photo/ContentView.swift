@@ -34,8 +34,10 @@ struct txtField: View {
 
     var body: some View {
         HStack {
-            Text("Where：どこで")
+            Text(" Where：どこで")
+                .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
+                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("Where：どこで", text: $bpn1)
                     .frame(height: 25, alignment: .center)
                     .padding(.all, 5)
@@ -47,7 +49,9 @@ struct txtField: View {
         }
         HStack {
             Text("Who：だれが")
+                .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
+                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("Who：だれが", text: $bpn2)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
@@ -59,7 +63,9 @@ struct txtField: View {
         }
         HStack {
             Text("What：何を")
+                .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
+                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("What：何を", text: $bpn3)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
@@ -71,7 +77,9 @@ struct txtField: View {
         }
         HStack {
             Text("Why：なぜ")
+                .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
+                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("Why：なぜ", text: $bpn4)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
@@ -83,7 +91,9 @@ struct txtField: View {
         }
         HStack {
             Text("How：どのように")
+                .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
+                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("How：どのように", text: $bpn5)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
@@ -141,7 +151,7 @@ struct ContentView: View {
                         VStack {
                             pkrView(jyo: $jyoutai)
                             HStack  {
-                                Text("When：いつ：")
+                                Text("When：いつ")
                                     .frame(width: 250, alignment: .leading)
                                 Text(f.string(from: OutDate))
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -163,6 +173,7 @@ struct ContentView: View {
                             else {
                                 Image(systemName: "photo")
                                     .resizable()
+                                    .frame(width: 500)
                                     .foregroundColor(.gray)
                                     .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
                             }
@@ -197,19 +208,19 @@ struct ContentView: View {
                                 self.ScreenAlert = "状態を選択して下さい。"
                             } else if Where == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Where：どこで」を入力して下さい。　対象外：「(空白)」"
+                                self.ScreenAlert = "「Where：どこで」を入力して下さい。　　対象外：「(空白)」"
                             }else if Who == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Who：だれが」を入力して下さい。　対象外：「(空白)」"
+                                self.ScreenAlert = "「Who：だれが」を入力して下さい。　　対象外：「(空白)」"
                             }else if What == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「What：何が」を入力して下さい。　対象外：「(空白)」"
+                                self.ScreenAlert = "「What：何が」を入力して下さい。　　対象外：「(空白)」"
                             }else if Why == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「Why：なぜ」を入力して下さい。　対象外：「(空白)」"
+                                self.ScreenAlert = "「Why：なぜ」を入力して下さい。　　対象外：「(空白)」"
                             }else if How == "" {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "「How：どのように」を入力して下さい。　対象外：「(空白)」"
+                                self.ScreenAlert = "「How：どのように」を入力して下さい。　　対象外：「(空白)」"
                             }
                             else if image == nil {
                                 self.ScreenShot = true
