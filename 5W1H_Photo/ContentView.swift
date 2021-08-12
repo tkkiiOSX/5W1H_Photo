@@ -34,7 +34,7 @@ struct txtField: View {
 
     var body: some View {
         HStack {
-            Text(" Where：どこで")
+            Text("Where：どこで")
                 .foregroundColor(.black)
                 .frame(width: 250, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
@@ -149,10 +149,18 @@ struct ContentView: View {
                     //ここから切り取りスタート
                     GeometryReader {geometry2 in
                         VStack {
+                            HStack  {
+                            Text("Status：状態")
+                                .foregroundColor(.black)
+                                .frame(width: 250, alignment: .leading)
+                                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
                             pkrView(jyo: $jyoutai)
+                            }
                             HStack  {
                                 Text("When：いつ")
+                                    .foregroundColor(.black)
                                     .frame(width: 250, alignment: .leading)
+                                    .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
                                 Text(f.string(from: OutDate))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.all, 5)
@@ -205,7 +213,7 @@ struct ContentView: View {
                             UIApplication.shared.closeKeyboard()
                             if jyoutai == 0 {
                                 self.ScreenShot = true
-                                self.ScreenAlert = "状態を選択して下さい。"
+                                self.ScreenAlert = "Status：状態を選択して下さい。"
                             } else if Where == "" {
                                 self.ScreenShot = true
                                 self.ScreenAlert = "「Where：どこで」を入力して下さい。　　対象外：「(空白)」"
