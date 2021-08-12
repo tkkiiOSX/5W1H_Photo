@@ -36,7 +36,7 @@ struct txtField: View {
         HStack {
             Text("Where：どこで")
                 .foregroundColor(.black)
-                .frame(width: 250, alignment: .leading)
+                .frame(width: 240, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
             TextField("Where：どこで", text: $bpn1)
                     .frame(height: 25, alignment: .center)
@@ -48,11 +48,11 @@ struct txtField: View {
                     .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
         }
         HStack {
-            Text("Who：だれが")
+            Text("Who   ：だれが")
                 .foregroundColor(.black)
-                .frame(width: 250, alignment: .leading)
+                .frame(width: 240, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
-            TextField("Who：だれが", text: $bpn2)
+            TextField("Who   ：だれが", text: $bpn2)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
                 .border(Color.black)
@@ -62,11 +62,11 @@ struct txtField: View {
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
         }
         HStack {
-            Text("What：何を")
+            Text("What  ：何を")
                 .foregroundColor(.black)
-                .frame(width: 250, alignment: .leading)
+                .frame(width: 240, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
-            TextField("What：何を", text: $bpn3)
+            TextField("What  ：何を", text: $bpn3)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
                 .border(Color.black)
@@ -76,11 +76,11 @@ struct txtField: View {
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
         }
         HStack {
-            Text("Why：なぜ")
+            Text("Why   ：なぜ")
                 .foregroundColor(.black)
-                .frame(width: 250, alignment: .leading)
+                .frame(width: 240, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
-            TextField("Why：なぜ", text: $bpn4)
+            TextField("Why   ：なぜ", text: $bpn4)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
                 .border(Color.black)
@@ -90,11 +90,11 @@ struct txtField: View {
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
         }
         HStack {
-            Text("How：どのように")
+            Text("How   ：どのように")
                 .foregroundColor(.black)
-                .frame(width: 250, alignment: .leading)
+                .frame(width: 240, alignment: .leading)
                 .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
-            TextField("How：どのように", text: $bpn5)
+            TextField("How   ：どのように", text: $bpn5)
                 .frame(height: 25, alignment: .center)
                 .padding(.all, 5)
                 .border(Color.black)
@@ -150,22 +150,23 @@ struct ContentView: View {
                     GeometryReader {geometry2 in
                         VStack {
                             HStack  {
-                            Text("Status：状態")
-                                .foregroundColor(.black)
-                                .frame(width: 250, alignment: .leading)
-                                .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
+                                Text("Status：状態")
+                                    .foregroundColor(.black)
+                                    .frame(width: 240, alignment: .leading)
+                                    .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
                             pkrView(jyo: $jyoutai)
                             }
                             HStack  {
-                                Text("When：いつ")
+                                Text("When  ：いつ")
                                     .foregroundColor(.black)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 240, alignment: .leading)
                                     .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
                                 Text(f.string(from: OutDate))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.all, 5)
                                     .border(Color.black)
                                     .padding(.all, 5)
+                                    .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 10, y: 10)
                             }
                             .font(.system(size: 25))
                             .foregroundColor(.black)
@@ -177,6 +178,8 @@ struct ContentView: View {
                                 image?
                                     .resizable()
                                     .scaledToFit()
+                                    .cornerRadius(30)
+                                    .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
                             }
                             else {
                                 Image(systemName: "photo")
