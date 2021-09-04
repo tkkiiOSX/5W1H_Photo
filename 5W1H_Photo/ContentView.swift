@@ -178,6 +178,7 @@ struct ContentView: View {
                                 image?
                                     .resizable()
                                     .scaledToFit()
+                                    //.scaledToFill()
                                     .cornerRadius(30)
                                     .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
                             }
