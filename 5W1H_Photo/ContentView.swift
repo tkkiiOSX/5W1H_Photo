@@ -173,6 +173,10 @@ struct ContentView: View {
                             .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
 
                             txtField(bpn1: $Where, bpn2: $Who, bpn3: $What, bpn4: $Why, bpn5: $How)
+                            
+                            //Text("Photo：写真")
+                               // .foregroundColor(.black)
+                               // .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
 
                             if image != nil {
                                 image?
@@ -205,6 +209,7 @@ struct ContentView: View {
 
                         }) {
                             //Text("撮影")
+                                //.shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
                             Image(systemName: "camera")
                                 .font(.system(size: 60))
                                 .shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
@@ -250,7 +255,8 @@ struct ContentView: View {
                             }
 
                         }) {
-                            //Text("登録")
+                            //Text("共有")
+                                //.shadow(color: Color.gray.opacity(0.8), radius: 4, x: 10, y: 10)
                             Image(systemName: "square.and.arrow.up")
                                 .font(.system(size: 60
                                 ))
@@ -259,7 +265,7 @@ struct ContentView: View {
                         .padding()
                         //.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                         .alert(isPresented: $ScreenShot, content: {
-                            Alert(title: Text("完了"), message: Text(ScreenAlert), dismissButton: .default(Text("OK")))
+                            Alert(title: Text("完了"), message: Text(ScreenAlert), dismissButton: .default(Text("閉じる")))
                         })
 
                         Spacer()
